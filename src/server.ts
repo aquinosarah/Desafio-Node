@@ -97,7 +97,3 @@ export interface Livro{
 	genero: string,
 }
 
-function listarLivrosFantasia() {
-	throw new Error("Function not implemented.");
-}
-
