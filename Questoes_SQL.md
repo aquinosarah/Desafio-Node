@@ -41,20 +41,34 @@ Com base nas tabelas:
 
 1. Monte uma consulta que retorne o nome e idade das pessoas maiores de idade ordenado pela idade em ordem decrescente;
 ```SQL
+<<<<<<< HEAD
  SELECT Nome, Idade
  FROM Pessoas
  WHERE Idade >= 18 
  ORDER BY Idade DESC;
+=======
+SELECT Nome, Idade
+FROM Pessoas
+WHERE Idade >= 18
+ORDER BY Idade DESC;
+
+>>>>>>> 181a8db8eb62b2156b15da151eac2f3f989bf899
 
 ```
 2. Monte uma consulta que retorne a idade mais alta na tabela;
 ```SQL
+<<<<<<< HEAD
  SELECT MAX(Idade) AS MaiorIdade
  FROM Pessoas;
+=======
+SELECT MAX(Idade) AS MaiorIdade
+FROM Pessoas;
+>>>>>>> 181a8db8eb62b2156b15da151eac2f3f989bf899
 
 ```
 3. Atualize o nome de todas as pessoas que são menores de idades adicionando “ ( menor de idade ) “ ao nome dela;
 ```SQL
+<<<<<<< HEAD
   UPDATE Pessoas
   SET Nome = CONCAT(Nome, '(menor de idade)')
   WHERE Idade < 18;
@@ -63,22 +77,47 @@ Com base nas tabelas:
 ```SQL
  DELETE FROM Pessoas
  WHERE Pais_Origem = 'Brasil';
+=======
+UPDATE Pessoas
+SET Nome = CONCAT(Nome, ' (menor de idade)')
+WHERE Idade < 18;
+
+
+```
+4. Monte o comando para remover da tabela todas as pessoas que são do Brasil;
+```SQL
+DELETE FROM Pessoas
+WHERE Pais_Origem = 'Brasil';
+
+>>>>>>> 181a8db8eb62b2156b15da151eac2f3f989bf899
 
 ```
 5. Quais pessoas já visitaram a França? Monte a consulta que retornará o nome delas;
 ```SQL
+<<<<<<< HEAD
 SELECT P.Nome 
 FROM Pessoas P
 INNER JOIN Pais_Visitados PV ON P.Codigo = PV. Codigo_Pessoa
+=======
+SELECT P.Nome
+FROM Pessoas P
+INNER JOIN Paises_Visitados PV ON P.Codigo = PV.Codigo_Pessoa
+>>>>>>> 181a8db8eb62b2156b15da151eac2f3f989bf899
 WHERE PV.Pais_Visitado = 'França';
 
 ```
 6. Quais são as pessoas que não visitaram nenhum pais? Monte a consulta retornando o nome delas;
 ```SQL
 SELECT P.Nome
+<<<<<<< HEAD
 FROM Pessoas P 
 INNER JOIN Pais_Visitados PV ON P.Codigo = PV Codigo_Pessoa
     WHERE PV.Pais_Visitado = 'França';
+=======
+FROM Pessoas P
+INNER JOIN Paises_Visitados PV ON P.Codigo = PV.Codigo_Pessoa
+WHERE PV.Pais_Visitado = 'França';
+>>>>>>> 181a8db8eb62b2156b15da151eac2f3f989bf899
 
 ```
 
