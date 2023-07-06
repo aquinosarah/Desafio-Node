@@ -56,7 +56,15 @@ export class ProvaTesteComponent {
 		return indiceLivro
 	}
 
-	listarLivrosFantasia(): string{
+	listarLivrosFantasia():any{
+		this.listLivros.push({ id: 0, nome: 'Código Limpo', genero: "Tecnologia" })
+		this.listLivros.push({ id: 1, nome: 'Senhor do Anéis', genero: "Fantasia" })
+		this.listLivros.push({ id: 2, nome: 'WildCards', genero: "Fantasia" })
+		this.listLivros.push({ id: 3, nome: 'Harry Potter e o Prisioneiro de Azkaban', genero: "Fantasia" })
+		this.listLivros.push({ id: 4, nome: 'Javascript de alto desempenho', genero: "Tecnologia" })
+		this.listLivros.push({ id: 5, nome: 'O poder da ação', genero: "Administração" })
+	
+		 
 		/**
 		 * Retorne uma String contendo o nome de todos os Livros que são de fantasia.
 		 */
