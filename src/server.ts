@@ -12,6 +12,7 @@ server.listen(port, hostname, () => {
 export class ProvaTesteComponent {
 	listLivros: Array<Livro> = []
 	constructor() { 
+		
 		this.initLivros()
 		this.criarUmNovoLivro("Arquitetura Limpa", "Tecnologia");
 		this.criarUmNovoLivro("Harry Potter e a Camara secreta", "Fantasia");
@@ -95,9 +96,5 @@ export interface Livro{
 	id: number,
 	nome: string,
 	genero: string,
-}
-
-function listarLivrosFantasia() {
-	throw new Error("Function not implemented.");
 }
 
