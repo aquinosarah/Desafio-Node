@@ -54,8 +54,7 @@ export class ProvaTesteComponent {
 		}
 	}
 
-	buscarLivro(livro: string, genero: string): number{
-		let indiceLivro: number = -1
+	buscarLivro(_livro: string, genero: string): number{
 		for (let index = 0; index < this.listLivros.length; index++) {
 			const livro = this.listLivros[index]
 			if (livro.nome === nome && livro.genero === genero) {
@@ -72,16 +71,17 @@ export class ProvaTesteComponent {
 		
 	}
 
-	listarLivrosFantasia(): livros {
+	listarLivrosFantasia(): {
 		const livrosFantasia: string[] = [];
-		for (let index = 0; index < this.listLivros.length; index++) {
-			const livro = this.listLivros[index];
+		for (let index = 0; index < listLivros.length; index++) {
+			const livro = listLivros[index];
 			if (livro.genero === "Fantasia") {
 				livrosFantasia.push(livro.nome);
 			}
 		}
-		console.log("Lista de Livros de Fantasia:", livrosFantasia);
 		return livrosFantasia.join(", ");
+		console.log("Lista de Livros de Fantasia:", livrosFantasia);
+		
 	}
 
 
