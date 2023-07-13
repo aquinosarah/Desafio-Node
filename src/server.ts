@@ -66,6 +66,7 @@ server.listen(port, hostname, () => {
 			const livro = this.listLivros[index]
 			// if (livro.nome === nome && livro.genero === genero) {
 			// 	return index;
+			
 			// }
 		}
 			/**
