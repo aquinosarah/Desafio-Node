@@ -70,10 +70,8 @@ server.listen(port, hostname, () => {
 			// }
 			
 		}
-		let validaçaoLivros = indiceLivro;
+	
 		
-			while ( validaçaoLivros <= 10) 
-				console.log(validaçaoLivros)
 				
 			
 		
