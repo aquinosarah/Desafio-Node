@@ -108,10 +108,13 @@ WHERE PV.Pais_Visitado = 'França';
 ```
 6. Quais são as pessoas que não visitaram nenhum pais? Monte a consulta retornando o nome delas;
 ```SQL
-select pais_visitado
-from Pessoas P
-inner join PAISES_VISITADOS PV ON P.Codigo = PV. Codigo_Pessoa
- WHERE PV.Pais_Visitado = 'França';
+SELECT nome
+FROM pessoas p
+WHERE NOT EXISTS (
+SELECT 1
+FROM paises_visitados pv
+WHERE pais_visitado = p.codigo 
+); 
 
 ```
 
